@@ -12,17 +12,13 @@ Horns.all = [];
 
 Horns.prototype.render = function() {
 
-  // Create a new empty div tag
   let hornOutput = $('<div></div>');
       hornOutput.addClass(this.keyword);
 
-  // clone (copy) the html from inside the photo-template
   let template = $('#photo-template').html();
 
-  // Add the template to the output div
   hornOutput.html( template );
 
-  // Put the data in
   hornOutput.find('h2').text( this.title );
   hornOutput.find('img').attr('src', this.image_url);
   hornOutput.find('p').text(this.description);
